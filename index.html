@@ -1,0 +1,837 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home 02</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <!-- Plugin css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lightcase.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.nstSlider.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.min.css" media="all" />
+
+    <!-- own style css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/rtl.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+
+</head>
+
+<body ng-app="jamApp">
+    <div class="box-layout">
+
+        <header class="header-style-1">
+            <div class="bg-header-top" ng-controller="subhead">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-top">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#"><img src="{{logo}}" alt="logo" class="img-responsive" /></a>
+                                </div>
+                                <!-- .col-md-3 -->
+                                <div class="col-md-9">
+                                    <div class="header-top-right pull-right">
+                                        <ul class="header-contact">
+                                            <li>
+                                                <i class="flaticon-time-left"></i>
+                                                <div class="h-adress-content">
+                                                    <h6>Ouvert </h6>
+                                                    <p>{{time}}</p>
+                                                </div>
+                                                <!-- .h-adress-content -->
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-vibrating-phone"></i>
+                                                <div class="h-adress-content">
+                                                    <h6>Phone</h6>
+                                                    <p>{{phone}}</p>
+                                                </div>
+                                                <!-- .h-adress-content -->
+                                            </li>
+                                            <li>
+                                                <i class="flaticon-placeholder"></i>
+                                                <div class="h-adress-content">
+                                                    <h6>Address</h6>
+                                                    <p>{{adresse}}</p>
+                                                </div>
+                                                <!-- .h-adress-content -->
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .header-top-right -->
+                                </div>
+                                <!-- .col-md-9 -->
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .header-top -->
+                    </div>
+                    <!-- .header-top -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-header-top -->
+
+            <!-- Start Menu -->
+            <div class="bg-main-menu menu-scroll">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-menu">
+                            <nav class="navbar">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+                                    <a class="navbar-brand" href="index-2.html"><img src="assets/images/home01/logo-res.png" alt="logo" class="img-responsive" /></a>
+                                </div>
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav" ng-controller="menu">
+                                        <li ng-repeat="nav in navs"><a href="{{nav.lien}}">{{nav.nom}}</a></li>
+
+
+
+
+
+
+
+
+
+                                    </ul>
+                                    <div class="menu-right-option pull-right">
+
+
+                                        <!-- .cart-option -->
+
+                                        <div class="search-box">
+                                            <i class="fa fa-search first_click" aria-hidden="true" style="display: block;"></i>
+                                            <i class="fa fa-times second_click" aria-hidden="true" style="display: none;"></i>
+                                        </div>
+
+                                        <!-- .donate-option -->
+                                        <div class="search-box-text">
+                                            <form action="#">
+                                                <input type="text" name="search" id="all-search" placeholder="Search Here">
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                    <!-- .header-search-box -->
+                                </div>
+                                <!-- .navbar-collapse -->
+                            </nav>
+                        </div>
+                        <!-- .main-menu -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .container -->
+            </div>
+            <!-- .bg-main-menu -->
+        </header>
+
+        <!-- Start Slider Section -->
+
+        <section class="bg-slider-option">
+            <div class="slider-option">
+                <div id="slider" class="carousel slide wow fadeInDown" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox" ng-controller="slider">
+
+                        <div class="item {{sli.status}}" ng-repeat="sli in sliders">
+                            <div class="slider-item">
+                                <img src="{{sli.image}}" alt="bg-slider-2">
+                                <div class="slider-content-area">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="slider-content">
+                                                    <h3>{{sli.surtitre}}</h3>
+                                                    <h2>{{sli.titre}}</h2>
+                                                    <p>{{sli.soustitre}}</p>
+                                                    <div class="slider-btn">
+                                                        <a href="{{sli.btn1_lien}}" class="btn btn-default">{{sli.btn1_titre}}</a>
+                                                        <a href="{{sli.btn2_lien}}" class="btn btn-default">{{sli.btn2_titre}}</a>
+                                                    </div>
+                                                    <!-- .slider-btn -->
+                                                </div>
+                                                <!-- .carousel-caption -->
+                                            </div>
+                                            <!-- .col-md-6 -->
+                                            <div class="col-md-4"></div>
+                                            <!-- .col-md-6 -->
+                                        </div>
+                                        <!-- .row -->
+                                    </div>
+                                    <!-- .container -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- .items -->
+
+
+                        <!-- .items -->
+
+
+                        <!-- .items -->
+                    </div>
+                    <!-- .carosoul-inner -->
+                    <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- .slider-option -->
+        </section>
+
+        <!-- End Slider Section -->
+
+
+
+
+        <!-- Start About scout Section -->
+        <section class="bg-about-greenforest" ng-controller="apropos">
+            <div class="container">
+                <div class="row">
+                    <div class="about-greenforest">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="about-greenforest-content">
+                                    <h2>{{titre}}</h2>
+                                    <p><span>{{descriptif}}</p>
+                                     <p>Cette application à pour objectif principal de mettre en relation les agriculteurs, bayam sellam et client ; en leur permettant de diffuser et recevoir des annonces en temps réel par différents canaux de communication (SMS, Internet, Email) .
+
+Dans le but de repondre aux problemes suivant :<br><br>
+
+</p>
+<ul>
+<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Des <strong>agriculteurs (Farm)</strong> qui n’arrivent pas à écouler toute la quantité de leurs productions au marché, perdent beaucoup parce que ne pouvant pas conserver leurs productions pour les vendre plus tard, une grande quantité pourrissent, presque la moitié de la production souvent. Pire encore, ils se voient les vendre à bas prix au marché.</li>
+<li> </li>
+<li> </li>
+</ul>
+
+                                    <a href="{{lien}}" class="btn btn-default">{{btn}}</a>
+                                   
+                                </div>
+                                <!-- .about-greenforest-content -->
+                            </div>
+                            <!-- .col-md-8 -->
+                            <div class="col-md-4">
+                                <div class="about-greenforest-img">
+                                    <img src="{{logo}}" alt="about-greenforet-img" class="img-responsive"  height="500px" width="400px" />
+                                </div>
+                                <!-- .about-greenforest-img -->
+                            </div>
+                            <!-- .col-md-4 -->
+                        </div>
+                    </div>
+                    <!-- .about-greenforest -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+
+
+
+        <!-- End About scout Section -->
+
+
+        <!-- Start Services Section -->
+
+        <section class="bg-services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="services-section">
+                        <div class="row">
+                            <div class="col-md-4" ng-controller="section_district">
+                                <div class="services-header">
+                                    <img src="{{image}}" alt="services-header-img" class="img-responsive" height="100px" width="100px" />
+                                    <h3>{{titre}}</h3>
+                                    <p>{{descriptif}}</p>
+                                    <a href="{{lien}}" class="btn btn-default">{{btn}}</a>
+                                </div>
+                                <!-- .services-header -->
+                            </div>
+                            <!-- .col-md-4 -->
+                            <div class="col-md-8" ng-controller="districtlist">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6" ng-repeat="dist in districts">
+                                        <div class="services-items">
+                                            <i class="{{dist.icon}}"></i>
+                                            <div class="services-content">
+                                                <h4><a href="{{dist.lien}}">{{dist.titre}}</a></h4>
+                                                <p>{{dist.descriptif}}</p>
+                                            </div>
+                                            <!-- .services-content -->
+                                        </div>
+                                        <!-- .services-items -->
+                                    </div>
+                                    
+                                   
+                                    <!-- .col-md-6 -->
+                                    
+                                    <!-- .col-md-6 -->
+                                </div>
+                            </div>
+                            <!-- .col-md-8 -->
+                        </div>
+                    </div>
+                    <!-- .services-section -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+
+
+        <!-- End Services Section -->
+
+
+        <!-- Start Count Section -->
+
+        <section class="bg-count-section" ng-controller="statistique">
+            <div class="count-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="count-option">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="count-items">
+                                        <i class="flaticon-internet"></i>
+                                        <span class="counter">5</span><span>+</span>
+                                        <h4>Pays</h4>
+                                </div>
+                                <!-- .count-items -->
+                            </div>
+                            <!-- .col-md-3 -->
+                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                <div class="count-items">
+                                    <i class="flaticon-man"></i>
+                                    <span class="counter">750</span><span>+</span>
+                                    <h4>Producteurs</h4>
+                                </div>
+                                <!-- .count-items -->
+                            </div>
+                            <!-- .col-md-3 -->
+                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                <div class="count-items">
+                                    <i class="flaticon-rocket-launch"></i>
+                                    <span class="counter">2000</span>
+                                    <h4>Achats</h4>
+                                </div>
+                                <!-- .count-items -->
+                            </div>
+                            <!-- .col-md-3 -->
+                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                <div class="count-items">
+                                    <i class="flaticon-man"></i>
+                                    <span class="counter">20</span>
+                                    <h4>Employés</h4>
+                                </div>
+                                <!-- .count-items -->
+                            </div>
+                            <!-- .col-md-3 -->
+                        </div>
+                        <!-- .row -->
+                    </div>
+                    <!-- .count-section -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+    </div>
+    </section>
+
+    <!-- End Count Section -->
+
+    <!-- Start Recent Project Section -->
+
+
+    <section class="bg-recent-project" ng-controller="section_projets">
+        <div class="container">
+            <div class="row">
+                <div class="recent-project">
+                    <div class="section-header">
+                        <h2>{{titre}}</h2>
+                        <p>{{descriptif}}</p>
+                    </div>
+                    <!-- .section-header -->
+
+                    <div id="filters" class="button-group ">
+                        <button class="button is-checked" data-filter="*">Tous</button>
+                        <button class="button" data-filter=".cat-1">Agriculteurs</button>
+                        <button class="button" data-filter=".cat-2">Aviculteurs</button>
+                        <button class="button" data-filter=".cat-3">Pisciculteurs</button>
+                        <button class="button" data-filter=".cat-4">Apiculteurs</button>
+                    </div>
+                    <div class="portfolio-items" ng-controller="projet">
+                        <div class="item {{pro.categorie}}" data-category="transition" ng-repeat="pro in projets">
+                            <div class="item-inner">
+                                <div class="portfolio-img">
+                                    <div class="overlay-project"></div>
+                                    <!-- .overlay-project -->
+                                    <img src="{{pro.image}}" alt="recent-project-img-1">
+                                    <ul class="project-link-option">
+                                        <li class="project-link"><a href="{{pro.lien}}"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                        <li class="project-search"><a href="{{pro.image}}" data-rel="lightcase:myCollection"><i class="fa fa-search-plus" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.portfolio-img -->
+                                <div class="recent-project-content">
+                                    <h4><a href="{{pro.lien}}">{{pro.titre}}</a></h4>
+                                    <p>Domaine : <span><a href="#">{{pro.auteur}}</a></span></p>
+                                     <p>situé : <span><a href="#">{{pro.situe}}</a></span></p>
+                                </div>
+                                <!-- .latest-port-content -->
+                            </div>
+                            <!-- .item-inner -->
+                        </div>
+                        <!-- .items -->
+
+
+                        <!-- .items -->
+
+
+
+
+                        <!-- .items -->
+
+                        <!-- .items -->
+
+                        <!-- .items -->
+                    </div>
+                    <!-- .isotope-items -->
+
+
+
+
+
+
+
+
+
+                </div>
+                <!-- .recent-project -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+    </section>
+
+
+    <!-- End Recent Project Section -->
+
+
+    <!-- Start our volunteers Section -->
+
+    <section class="bg-volunteers-section" ng-controller="section_membre">
+        <div class="container">
+            <div class="row">
+                <div class="volunteers-option">
+                    <div class="section-header">
+                        <h2>{{titre}}</h2>
+                        <p>{{descriptif}}</p>
+                    </div>
+                    <!-- .section-header -->
+                    <div class="row" ng-controller="membre">
+
+
+                        <div class="col-md-3 col-sm-6 col-xs-6" ng-repeat="memb in membres">
+                            <div class="volunteers-items">
+                                <div class="volunteers-img">
+                                    <img src="{{memb.image}}" alt="volunteers-img-1" class="img-responsive" />
+                                </div>
+                                <!-- .volunteers-img -->
+                                <div class="volunteers-content">
+                                    <h4><a href="{{memb.lien}}">{{memb.nom}}</a></h4>
+                                    <p>{{memb.poste}}</p>
+                                </div>
+                                <!-- .volunteers-content -->
+                                <div class="volunteers-social-icon">
+                                    <ul class="social-icon">
+                                        <li><a href="{{memb.facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+                                    </ul>
+                                </div>
+                                <!-- .volunteers-social-icon -->
+                            </div>
+                            <!-- .volunteers-items -->
+                        </div>
+
+
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .volume-option -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+    </section>
+
+    <!-- End our volunteers Section -->
+
+    <!-- Start Upcoming Events Section -->
+
+
+    <section class="bg-upcoming-events" ng-controller="section_event">
+        <div class="container">
+            <div class="row">
+                <div class="upcoming-events">
+                    <div class="section-header">
+                        <h2>{{titre}}</h2>
+                        <p>{{descriptif}}</p>
+                    </div>
+                    <!-- .section-header -->
+                    <div class="row" ng-controller="evenement">
+                        <div class="col-md-6" ng-repeat="event in evenements">
+                            <div class="event-items">
+                                <div class="event-img">
+                                    <a href="event_single.html"><img src="{{event.image}}" alt="upcoming-events-img-1" class="img-responsive" /></a>
+                                    <div class="date-box">
+                                        <h3>{{event.jour}}</h3>
+                                        <h5>{{event.mois}}</h5>
+                                    </div>
+                                    <!-- .date-box -->
+                                </div>
+                                <!-- .event-img -->
+                                <div class="events-content">
+                                    <h3><a href="{{event.lien}}">{{event.titre}}</a></h3>
+                                    <ul class="meta-post">
+                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i> {{event.heure}}</li>
+                                        <li><i class="flaticon-placeholder"></i> {{event.lieu}}</li>
+                                    </ul>
+                                    <p>{{event.descriptif}}</p>
+                                    <a href="{{event.lien}}" class="btn btn-default">join now</a>
+                                </div>
+                                <!-- .events-content -->
+                            </div>
+                            <!-- .events-items -->
+                        </div>
+
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .upcoming-events -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+    </section>
+
+
+    <!-- End Upcoming Events Section -->
+    <!-- Start Testimonial Section -->
+
+    <section class="bg-testimonial-section" ng-controller="section_temiognages">
+        <div class="testimonial-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="testimonial-option">
+                        <div class="section-header">
+                            <h2>{{titre}}</h2>
+                            <p>{{descriptif}}</p>
+                        </div>
+                        <!-- .section-header -->
+                        <div class="testimonial-container">
+                            <div class="swiper-wrapper" ng-controller="temoignage">
+
+                                <div class="swiper-slide" ng-repeat="temoi in temoignages">
+                                    <div class="testimonial-content">
+                                        <p>{{temoi.text}}</p>
+                                    </div>
+                                    <!-- .testimonial-content -->
+                                    <div class="author-details">
+                                        <div class="author-img">
+                                            <img src="{{temoi.image}}" alt="scout sud cameroun" />
+                                        </div>
+                                        <!-- .author-img -->
+                                        <div class="author-name">
+                                            <h4>{{temoi.nom}}</h4>
+                                            <h6>{{temoi.fonction}}</h6>
+                                        </div>
+                                        <!-- .author-img -->
+                                    </div>
+                                    <!-- .author-details -->
+                                </div>
+
+
+                                <!-- .swiper-slide -->
+
+                                <!-- .swiper-slide -->
+
+                                <!-- .swiper-slide -->
+
+                                <!-- .swiper-slide -->
+
+                                <!-- .swiper-slide -->
+
+                                <!-- .swiper-slide -->
+
+                            </div>
+                            <!-- .swiper-wrapper -->
+
+                        </div>
+                        <!-- .testmonial-container -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- .testimonial-option -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .testimonial-overlay -->
+    </section>
+
+    <!-- End Testimonial Section -->
+
+
+    <!-- Start Blog Section -->
+
+
+    <section class="bg-blog-section" ng-controller="section_activite">
+        <div class="container">
+            <div class="row">
+                <div class="blog-section">
+                    <div class="section-header">
+                        <h2>{{titre}}</h2>
+                        <p>{{descriptif}}</p>
+                    </div>
+                    <!-- .section-header -->
+                    <div class="row" ng-controller="activite">
+                        <div class="col-md-4 col-sm-6 col-xs-6" ng-repeat="act in activites">
+                            <div class="blog-items">
+                                <div class="blog-img">
+                                    <a href="{{act.lien}}"><img src="{{act.image}}" alt="blog-img-1" class="img-responsive" /></a>
+                                </div>
+                                <!-- .blog-img -->
+                                <div class="blog-content-box">
+                                    <div class="blog-content">
+                                        <h4><a href="{{act.lien}}">{{act.titre}}</a></h4>
+                                        <p>{{act.descriptif}}</p>
+                                    </div>
+                                    <!-- .blog-content -->
+                                    <div class="meta-box">
+                                        <ul class="meta-post">
+                                            <li><i class="fa fa-calendar" aria-hidden="true"></i> {{act.date}}</li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- .meta-box -->
+                                </div>
+                                <!-- .blog-content-box -->
+                            </div>
+                            <!-- .blog-items -->
+                        </div>
+                        <!-- .col-md-4 -->
+
+                        <!-- .col-md-4 -->
+
+                        <!-- .col-md-4 -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .blog-section -->
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .bg-blog-section -->
+    </section>
+
+
+    <!-- End Blog Section -->
+
+    <!-- Start Collection Se Section -->
+
+
+    <section class="bg-collection-section" ng-controller="section_boutique">
+        <div class="container">
+            <div class="row">
+                <div class="collection-option">
+                    <div class="section-header">
+                        <h2>{{titre}}</h2>
+                        <p>{{descriptif}}</p>
+                    </div>
+                    <!-- .section-header -->
+                    <div class="row" ng-controller="boutique">
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="collection-items" ng-repeat="art in articles">
+                                <div class="collection-img">
+                                    <div class="collection-overlay"></div>
+                                    <img src="{{art.image}}" alt="boutique scout sud" />
+                                    <ul class="collection-icon">
+                                        <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="{{art.image}}" data-rel="lightcase:myCollection"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- .collection-img -->
+                                <div class="collection-content">
+                                    <h4><a href="{{art.lien}}">{{art.titre}}</a></h4>
+                                    <h5>{{art.prix}} {{art.device}}</h5>
+                                    <ul class="star-icon">
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- .collection-content -->
+                            </div>
+                            <!-- .collection-items -->
+                        </div>
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+
+                        <!-- .col-md-3 -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .collection-option -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+    </section>
+
+
+
+
+    <!-- End Collection Section -->
+    <!-- Start Sponsors Section -->
+
+
+
+
+    <!-- End Sponsors Section -->
+
+
+    <!-- Start Footer Section -->
+
+    <footer>
+
+        <!-- .bg-footer-top -->
+
+        <div class="bg-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-bottom">
+                        <div class="copyright-txt">
+                            <p>&copy; 2019. Fait Par <a href="http://www.kevinobam.10000codeurs.com" title="Al-Amin(Web Designer)" target="_blank">kevin Obam Ekono</a></p>
+                        </div>
+                        <!-- .copyright-txt -->
+                        <div class="social-box">
+                            <ul class="social-icon-rounded">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- .social-box -->
+
+                    </div>
+                    <!-- .footer-bottom -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .bg-footer-bottom -->
+
+    </footer>
+
+    <!-- End Footer Section -->
+
+
+    <!-- Start Scrolling -->
+
+    <div class="scroll-img"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+
+    <!-- End Scrolling -->
+
+
+    </div>
+
+    <!-- Start Pre-Loader-->
+
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Pre-Loader -->
+
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.isotope.js"></script>
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/js/lightcase.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.nstSlider.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="assets/js/custom.isotope.js"></script>
+    <script type="text/javascript" src="assets/js/custom.map.js"></script>
+
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from demos.codexcoder.com/labartisan/html/GreenForest/home02.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2019 08:12:27 GMT -->
+
+</html>
+<!-- Mirrored from demos.codexcoder.com/labartisan/html/GreenForest/home02.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Apr 2019 08:12:27 GMT -->
